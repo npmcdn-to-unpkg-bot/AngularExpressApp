@@ -1,3 +1,3 @@
 <section class = "col-md-8 col-md-offset-2">
-    <the-message-component *ngFor="#message of messages" [message] ="message" (editClicked)="message.content = $event"></the-message-component>
+    <the-message-component *ngFor="let message of messages" [message] ="message" (editClicked)="message.content = $event"></the-message-component>
 </section>

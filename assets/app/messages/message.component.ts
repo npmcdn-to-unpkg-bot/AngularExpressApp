@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {Message} from "./message";
-import {EventEmitter} from "../../../public/js/vendor/@angular/common/esm/src/facade/async";
+import {MessageService} from "./message.service";
 
 @Component({
     moduleId: module.id,
@@ -13,7 +13,13 @@ export class MessageComponent{
     @Input() message: Message;
     @Output() editClicked = new EventEmitter<string>();
 
-    onClick(){
-        this.editClicked.emit('changed');
+    constructor(private _messageService: MessageService){}
+
+    onEdit(){
+        this._messageService.editMessage(this.message);
+    }
+
+    onDelete(){
+        this._messageService.deleteMessage(this.message);
     }
 }
