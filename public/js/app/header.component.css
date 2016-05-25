@@ -1,0 +1,17 @@
+header {
+    margin-bottom: 20px;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    float: none;
+    display: inline-block;
+}
+
+.router-link-active {
+    background-color: #337ab7;
+    color: white;
+}

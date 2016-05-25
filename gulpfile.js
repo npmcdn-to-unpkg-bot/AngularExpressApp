@@ -53,9 +53,18 @@ gulp.task('vendor', function() {
     gulp.src('node_modules/systemjs/**')
         .pipe(gulp.dest(vendor + '/systemjs/'));
 
+    //ng-bootstrap
+    gulp.src('node_modules/ng2-bootstrap/**')
+        .pipe(gulp.dest(vendor + '/ng2-bootstrap/'));
+
+    gulp.src('node_modules/moment/**')
+        .pipe(gulp.dest(vendor + '/moment'));
+
     //zonejs
     return gulp.src('node_modules/zone.js/**')
         .pipe(gulp.dest(vendor + '/zone.js/'));
+
+
 });
 
 gulp.task('watch', function () {

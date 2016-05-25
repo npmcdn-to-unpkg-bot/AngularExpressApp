@@ -4,13 +4,16 @@
     var map = {
         'app':                        'js/app', // 'dist',
         'rxjs':                       'js/vendor/rxjs',
-        '@angular':                   'js/vendor/@angular'
+        '@angular':                   'js/vendor/@angular',
+        'moment':                     'js/vendor/moment/moment.js',
+        'ng2-bootstrap':              'js/vendor/ng2-bootstrap'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'app':                        { main: 'boot.js',  defaultExtension: 'js' },
         'rxjs':                       { defaultExtension: 'js' },
+        'ng2-bootstrap':              { defaultExtension: 'js' }
     };
 
     var packageNames = [
@@ -22,7 +25,8 @@
         '@angular/platform-browser-dynamic',
         '@angular/router',
         '@angular/testing',
-        '@angular/upgrade'
+        '@angular/upgrade',
+        'ng2-bootstrap'
     ];
 
     // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
